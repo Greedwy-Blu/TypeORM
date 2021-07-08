@@ -12,8 +12,10 @@ app.set( "views", path.join( __dirname, "views" ) );
 app.set( "view engine", "ejs" );
 
 
+app.use(express.json);
+
 app.use(routes);
 
 
-app.use(express.json);
+
 app.listen(3000, ()=>console.log('🚀 Server started at http://localhost:3000'));
